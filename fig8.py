@@ -117,22 +117,22 @@ for i_f_exs in range(N_f_exs):
 
         axs.set_xticks([5, 25, 50, 75, 100])
         axs.set_yticks([5, 25, 50])
-        axs.set_xticklabels([5, 25, 50, 75, 100], fontsize=14)
-        axs.set_yticklabels([5, 25, 50], fontsize=14)
+        axs.set_xticklabels([5, 25, 50, 75, 100], fontsize=16)
+        axs.set_yticklabels([5, 25, 50], fontsize=16)
 
 cbar = fig.colorbar(im, ax=axes.ravel().tolist(), format=ticker.FuncFormatter(fmt))
 cbar.ax.tick_params(labelsize=16)
 
 for i_f_exs in range(N_f_exs):
     f_ex = f_exs[i_f_exs]
-    fig.text(0.06, (i_f_exs+1)/float(N_f_exs+1), r'$f_{{ex}} = {}$'.format(f_ex), va='center', fontsize=18, rotation='vertical')
+    fig.text(0.06, (i_f_exs+1)/float(N_f_exs+1), r'$f_{{ex}} = {}$'.format(f_ex), va='center', fontsize=20, rotation='vertical')
 
 for i_As in range(N_As):
     A = As[i_As]
-    fig.text((i_As+1.1)/float(N_As+2), 0.88, r'$A = {}$'.format(A), ha='center', fontsize=18)
+    fig.text((i_As+1.1)/float(N_As+2), 0.88, r'$A = {}$'.format(A), ha='center', fontsize=20)
 
-axes[N_f_exs-1, 0].set_xlabel(r'$\Delta$ (ms)', fontsize=16)
-axes[N_f_exs-1, 0].set_ylabel(r'$\delta$ (ms)', fontsize=16)
+axes[N_f_exs-1, 0].set_xlabel(r'$\Delta$ (ms)', fontsize=18)
+axes[N_f_exs-1, 0].set_ylabel(r'$\delta$ (ms)', fontsize=18)
 
 pl.show()
 
