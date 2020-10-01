@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.stats as ss
 import pylab as pl
-
+from string import ascii_lowercase
 
 FILL_DIST = True
 FILL_ALPHA = 0.2
@@ -170,9 +170,15 @@ delta_diam = [delta_diam_left, delta_diam_right]
 # First set up the figure, the axis, and the plot element we want to animate
 xs = [4, 2]
 ys = [2, 4]
+
+
+from matplotlib.ticker import FormatStrFormatter
+
+
+dpi = 600
 for i in range(len(_target_r_eff)):
 
-    fig, ax = pl.subplots(figsize=(12, 7))
+    fig, ax = pl.subplots(figsize=(12, 7), dpi=dpi)
 
     qmin = 0.001 # min quantile
     qmax = 0.999 # max quantile
@@ -191,6 +197,9 @@ for i in range(len(_target_r_eff)):
     pl.xlabel('Diameters ($\mu$m)', fontsize=18)
     pl.xticks(fontsize=16)
     pl.yticks(fontsize=16)
+
+    pl.gca().xaxis.set_major_formatter(FormatStrFormatter('%.2f'))
+    pl.gca().yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
 
     # gamma1
     k_gamma1 = krange_gamma1[i]
@@ -255,7 +264,10 @@ for i in range(len(_target_r_eff)):
 
     for j in range(diams[i].shape[0]):
         pl.bar(diams[i][j], normCounts[i][j]/delta_diam[i], delta_diam[i], color='k')
-    
-pl.show()
+ 
+    pl.savefig("Figure_5{1:}.png".format(ascii_lowercase[i]))
+
+# pl.show()
+
 
 

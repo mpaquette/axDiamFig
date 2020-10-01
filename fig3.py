@@ -208,8 +208,8 @@ def fmt(x, pos):
     return r'{:}.{:} \%'.format(a, b)
 
 
-
-pl.figure(figsize=(16, 9))
+dpi = 600
+pl.figure(figsize=(16, 9), dpi=dpi)
 gs = gridspec.GridSpec(2, 3, wspace=0.35)
 ax_main = pl.subplot(gs[0:2, 1])
 levels = [0, 0.001, 0.005, 0.01, 0.05]
@@ -303,6 +303,7 @@ for axis in ['top','bottom','left','right']:
     ax_b_r.spines[axis].set_color(cc_b_r.get_facecolor())
 
 
-pl.show()
+# pl.show()
+pl.savefig("Figure_3.png")
 
 

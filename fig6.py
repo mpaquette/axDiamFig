@@ -15,26 +15,27 @@ N_particule = N_init
 
 
 
-displacement_1 = np.load('/NOBACKUP2/paquette/displacement_D2p0_R5p0.npy')
-times_1 = np.load('/data/tu_paquette/myDocuments/presentation/restricted_diffusion/code/times_D2p0_R5p0.npy')
+## TODO have this actually somewhere
+displacement_1 = np.load('displacement_D2p0_R5p0.npy')
+times_1 = np.load('times_D2p0_R5p0.npy')
 cyl_radius_1 = 5.0e-6
 msd_1 = (1e12)*(displacement_1**2).mean(axis=1)
 limit_1 = 0.5*((1e6)*cyl_radius_1)**2
 
-displacement_2 = np.load('/NOBACKUP2/paquette/displacement_D2p0_R2p5.npy')
-times_2 = np.load('/data/tu_paquette/myDocuments/presentation/restricted_diffusion/code/times_D2p0_R2p5.npy')
+displacement_2 = np.load('displacement_D2p0_R2p5.npy')
+times_2 = np.load('times_D2p0_R2p5.npy')
 cyl_radius_2 = 2.5e-6
 msd_2 = (1e12)*(displacement_2**2).mean(axis=1)
 limit_2 = 0.5*((1e6)*cyl_radius_2)**2
 
-displacement_3 = np.load('/NOBACKUP2/paquette/displacement_D2p0_R1p0.npy')
-times_3 = np.load('/data/tu_paquette/myDocuments/presentation/restricted_diffusion/code/times_D2p0_R1p0.npy')
+displacement_3 = np.load('displacement_D2p0_R1p0.npy')
+times_3 = np.load('times_D2p0_R1p0.npy')
 cyl_radius_3 = 1.0e-6
 msd_3 = (1e12)*(displacement_3**2).mean(axis=1)
 limit_3 = 0.5*((1e6)*cyl_radius_3)**2
 
-displacement_4 = np.load('/NOBACKUP2/paquette/displacement_D2p0_R0p5.npy')
-times_4 = np.load('/data/tu_paquette/myDocuments/presentation/restricted_diffusion/code/times_D2p0_R0p5.npy')
+displacement_4 = np.load('displacement_D2p0_R0p5.npy')
+times_4 = np.load('times_D2p0_R0p5.npy')
 cyl_radius_4 = 0.5e-6
 msd_4 = (1e12)*(displacement_4**2).mean(axis=1)
 limit_4 = 0.5*((1e6)*cyl_radius_4)**2
@@ -59,8 +60,8 @@ label_size = 24
 pl.rcParams['xtick.labelsize'] = label_size
 pl.rcParams['ytick.labelsize'] = label_size
 
-
-fig, ax1 = pl.subplots(figsize=(16,9))
+dpi = 600
+fig, ax1 = pl.subplots(figsize=(16,9), dpi=dpi)
 ax1.plot((1e3)*times_1[1:tl], unrestricted[:tl-1], c=c7, label='Free')
 ax1.plot((1e3)*times_1[1:tl], msd_1[:tl-1], c=c1, label=r'd = {:.0f} $\mu$m'.format((1e6)*cyl_radius_1*2))
 ax1.axhline(limit_1, c=c1)
@@ -99,6 +100,7 @@ for axis in ['top','bottom','left','right']:
     ax2.spines[axis].set_color('yellow')
 
 
-pl.show()
+# pl.show()
+pl.savefig("Figure_6.png")
 
 

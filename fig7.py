@@ -53,7 +53,8 @@ def fmt(x, pos):
 
 
 textfs = 20
-pl.figure(figsize=(14,12))
+dpi = 600
+pl.figure(figsize=(14,12), dpi=dpi)
 pl.subplots_adjust(left=0.1, bottom=0.1, right=0.9, top=0.9, wspace=0.05, hspace=0.35)
 for iR,R in enumerate(Rs):
     S = vangelderen_cylinder_perp(D_invivo, R, scheme, 50)
@@ -77,7 +78,8 @@ for iR,R in enumerate(Rs):
     pl.xticks(fontsize=textfs-4)
     pl.yticks(fontsize=textfs-4)
 
-pl.show()
+# pl.show()
+pl.savefig("Figure_7.png")
 
 
 

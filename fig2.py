@@ -51,18 +51,21 @@ acq = np.array([[300e-3, 30e-3, 50e-3],
 
 # Test signal
 
+# Fig2
 # BIG / IN-vivo
 D = 2.0e-9
 RR1 = 0.5*4.5e-6
 RR2 = 0.5*3.5e-6
 ff1 = 0.3
 
+# Fig 9
 # # MEDIUM / IN-vivo
 # D = 2.0e-9
 # RR1 = 0.5*3.5e-6
 # RR2 = 0.5*2.5e-6
 # ff1 = 0.3
 
+# Fig 10
 # # SMALL / IN-vivo
 # D = 2.0e-9
 # RR1 = 0.5*2.5e-6
@@ -166,7 +169,9 @@ levels = [0, 0.001, 0.005, 0.01, 0.05]
 # nicely distinguisable from set1 categorical
 _colors = ['#984ea3', '#4daf4a', '#377eb8', '#ff7f00', '#e41a1c']
 
-fig, axes = pl.subplots(nrows=3, ncols=3, sharex=False, sharey=False, figsize=(14,12))
+
+dpi = 600
+fig, axes = pl.subplots(nrows=3, ncols=3, sharex=False, sharey=False, figsize=(14,12), dpi=dpi)
 fig.subplots_adjust(left=0.125, bottom=0.1, right=0.9, top=0.9, wspace=0.05, hspace=0.5)
 
 for ix,iy in np.ndindex((x1,x2)):
@@ -196,7 +201,7 @@ for ix,iy in np.ndindex((x1,x2)):
 cbar = fig.colorbar(cp, ax=axes.ravel().tolist(), format=ticker.FuncFormatter(fmt))
 cbar.ax.tick_params(labelsize=18)
 
-pl.show()
 
-
+# pl.show()
+pl.savefig("Figure_2.png") # BIG / IN-vivo
 
