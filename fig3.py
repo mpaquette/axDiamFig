@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from scipy.special import jnp_zeros
 
@@ -208,7 +211,7 @@ def fmt(x, pos):
     return r'{:}.{:} \%'.format(a, b)
 
 
-dpi = 600
+dpi = 100
 pl.figure(figsize=(16, 9), dpi=dpi)
 gs = gridspec.GridSpec(2, 3, wspace=0.35)
 ax_main = pl.subplot(gs[0:2, 1])

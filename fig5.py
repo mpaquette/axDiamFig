@@ -178,7 +178,7 @@ ys = [2, 4]
 from matplotlib.ticker import FormatStrFormatter
 
 
-dpi = 600
+dpi = 100
 for i in range(len(_target_r_eff)):
 
     fig, ax = pl.subplots(figsize=(12, 7), dpi=dpi)

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import pylab as pl
 
@@ -60,7 +63,7 @@ label_size = 24
 pl.rcParams['xtick.labelsize'] = label_size
 pl.rcParams['ytick.labelsize'] = label_size
 
-dpi = 600
+dpi = 100
 fig, ax1 = pl.subplots(figsize=(16,9), dpi=dpi)
 ax1.plot((1e3)*times_1[1:tl], unrestricted[:tl-1], c=c7, label='Free')
 ax1.plot((1e3)*times_1[1:tl], msd_1[:tl-1], c=c1, label=r'd = {:.0f} $\mu$m'.format((1e6)*cyl_radius_1*2))

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 
 from scipy.stats import gamma 
@@ -103,7 +106,7 @@ import matplotlib.ticker as ticker
 def fmt(x, pos):
     return r'{:.0f} $\mu$m'.format(x)
 
-dpi = 600
+dpi = 100
 fig, axes = pl.subplots(nrows=3, ncols=4, sharex=True, sharey=True, figsize=(16, 7), dpi=dpi)
 for i_f_exs in range(N_f_exs):
     f_ex = f_exs[i_f_exs]

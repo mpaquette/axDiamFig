@@ -91,7 +91,7 @@ for idata in range(len(datas)):
 
 	d_fitted = estimate_diameter_from_dict(signal)
 
-	dpi = 600
+	dpi = 100
 	pl.figure(figsize=(10, 6), dpi=dpi)
 	mycolormap = pl.cm.hsv
 	n = 3 + 1

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from scipy.special import jnp_zeros
 
@@ -53,7 +56,7 @@ def fmt(x, pos):
 
 
 textfs = 20
-dpi = 600
+dpi = 100
 pl.figure(figsize=(14,12), dpi=dpi)
 pl.subplots_adjust(left=0.1, bottom=0.1, right=0.9, top=0.9, wspace=0.05, hspace=0.35)
 for iR,R in enumerate(Rs):

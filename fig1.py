@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import pylab as pl
 from string import ascii_lowercase
@@ -96,7 +99,7 @@ for isnr in range(len(SNRs)):
 		lower_diams_mean[i] = np.quantile(fit_data[i][fit_data[i]<=bayes_mean_stat[i]], 1-interval)
 		upper_diams_mean[i] = np.quantile(fit_data[i][fit_data[i]>=bayes_mean_stat[i]], interval)
 
-	dpi = 600
+	dpi = 100
 	pl.figure(figsize=(10,10), dpi=dpi)
 
 	jitter_intensity = 0.5
