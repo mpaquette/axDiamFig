@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import scipy.stats as ss
 import pylab as pl
@@ -148,8 +151,8 @@ for target_r_eff in _target_r_eff:
 
 # Liewald diameter data
 # data recovered from plots
-data_left = np.genfromtxt('Liewald_2014_fig9_Human_brain_1_left.csv')
-data_right = np.genfromtxt('Liewald_2014_fig9_Human_brain_1_right.csv')
+data_left = np.genfromtxt('data/Liewald_2014_fig9_Human_brain_1_left.csv')
+data_right = np.genfromtxt('data/Liewald_2014_fig9_Human_brain_1_right.csv')
 
 
 # the bin center are known so we can correct

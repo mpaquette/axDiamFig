@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 
 import vangelderen as vg
@@ -63,7 +66,7 @@ def d_mean_V(counts, diams):
 
 
 # LEFT and RIGHT dataset
-datas = ['Liewald_2014_fig9_Human_brain_1_left.csv', 'Liewald_2014_fig9_Human_brain_1_right.csv']
+datas = ['data/Liewald_2014_fig9_Human_brain_1_left.csv', 'data/Liewald_2014_fig9_Human_brain_1_right.csv']
 
 for idata in range(len(datas)):
 	data = np.genfromtxt(datas[idata])
@@ -106,7 +109,7 @@ for idata in range(len(datas)):
 	pl.xlim(0, dmax)
 	pl.ylim(0, pmax)
 
-	pl.savefig("Figure_4{1:}.png".format(ascii_lowercase[idata]))
+	# pl.savefig("Figure_4{1:}.png".format(ascii_lowercase[idata]))
 
-# pl.show()
+pl.show()
 
