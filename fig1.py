@@ -12,6 +12,9 @@ mpl.rcParams['text.usetex'] = True
 mpl.rcParams['text.latex.preamble'] = r'\usepackage{{amsmath}}\usepackage{{amsfonts}}'
 
 
+#  T^-1 s^-1
+gamma = 42.515e6 * 2*np.pi
+
 def nilsson_diameter(sigma_bar, D_0, delta, G):
 	# d_min =  ((768 sigma_bar D_0) / (7 gamma^2 delta G^2))^(1/4)
 	# assume delta = DELTA
@@ -39,9 +42,6 @@ SNRs = [30.0, 300.0]
 
 for isnr in range(len(SNRs)):
 	SNR = SNRs[isnr]
-
-	#  T^-1 s^-1
-	gamma = 42.515e6 * 2*np.pi
 
 	# significance level
 	alphas = np.array([0.05])
