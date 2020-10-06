@@ -11,7 +11,7 @@ Michael Paquette, Cornelius Eichner, Thomas R. Kn&ouml;sche, and Alfred Anwander
 
 &nbsp;
 
-All figure making scripts are self contains, generating the data and then plotting it.  
+All figure-making scripts are self-contained, generating their data and plotting it.  
 &nbsp;
 
 
