@@ -49,12 +49,3 @@ Contour plot of signal differences for two cylinders distributions.
 Notebook with every single computation used in the manuscript outside of the figures  
 i.e. all tables and every quoted values of minimal signal, SNR or diameters, etc.
 
-
-
-### SOON
-
-- Utility script to compute distribution with same d<sub>eff</sub> under various constraint  
-- Pre-generated MC data for Fig6  
-
-
-
