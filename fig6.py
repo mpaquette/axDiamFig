@@ -13,34 +13,31 @@ diffusivity = 2.0e-9
 # s
 diff_time = 80.0e-3
 t_step = 10.0e-6
+
 N_init = 10000
 N_particule = N_init
 
 
 
-## TODO have this actually somewhere
-displacement_1 = np.load('displacement_D2p0_R5p0.npy')
-times_1 = np.load('times_D2p0_R5p0.npy')
+
+msd_1 = (1e12)*np.load('data/displacement_D2p0_R5p0.npy')
+times_1 = np.load('data/times_D2p0_R5p0.npy')
 cyl_radius_1 = 5.0e-6
-msd_1 = (1e12)*(displacement_1**2).mean(axis=1)
 limit_1 = 0.5*((1e6)*cyl_radius_1)**2
 
-displacement_2 = np.load('displacement_D2p0_R2p5.npy')
-times_2 = np.load('times_D2p0_R2p5.npy')
+msd_2 = (1e12)*np.load('data/displacement_D2p0_R2p5.npy')
+times_2 = np.load('data/times_D2p0_R2p5.npy')
 cyl_radius_2 = 2.5e-6
-msd_2 = (1e12)*(displacement_2**2).mean(axis=1)
 limit_2 = 0.5*((1e6)*cyl_radius_2)**2
 
-displacement_3 = np.load('displacement_D2p0_R1p0.npy')
-times_3 = np.load('times_D2p0_R1p0.npy')
+msd_3 = (1e12)*np.load('data/displacement_D2p0_R1p0.npy')
+times_3 = np.load('data/times_D2p0_R1p0.npy')
 cyl_radius_3 = 1.0e-6
-msd_3 = (1e12)*(displacement_3**2).mean(axis=1)
 limit_3 = 0.5*((1e6)*cyl_radius_3)**2
 
-displacement_4 = np.load('displacement_D2p0_R0p5.npy')
-times_4 = np.load('times_D2p0_R0p5.npy')
+msd_4 = (1e12)*np.load('data/displacement_D2p0_R0p5.npy')
+times_4 = np.load('data/times_D2p0_R0p5.npy')
 cyl_radius_4 = 0.5e-6
-msd_4 = (1e12)*(displacement_4**2).mean(axis=1)
 limit_4 = 0.5*((1e6)*cyl_radius_4)**2
 
 unrestricted = (1e12)*2*diffusivity*times_1[1:]
