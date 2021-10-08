@@ -1,7 +1,7 @@
 # Axon Diameter Measurements using Diffusion MRI are Infeasible.
 &nbsp;
 
-This repo contains the simulation functions and plotting functions used in the paper [(bioRxiv link)](https://www.biorxiv.org/content/10.1101/2020.10.01.320507v2)
+This repo contains the simulation functions and plotting functions used in the paper [(bioRxiv link)](https://www.biorxiv.org/content/10.1101/2020.10.01.320507v3)
 
 **Axon Diameter Measurements using Diffusion MRI are Infeasible**.  
 Michael Paquette, Cornelius Eichner, Thomas R. Kn&ouml;sche, and Alfred Anwander
